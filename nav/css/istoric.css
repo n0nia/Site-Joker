@@ -1,0 +1,86 @@
+/*navbar*/
+
+  ul.menu2>li, ul.menu2>li>ul.submenu2>li{
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 3rem;/*ascunde submeniu-ul*/
+    text-align: center;
+    list-style-type: none;
+    overflow: hidden;
+    padding-top: 50px;/*fata de sus*/
+    /*margin: 0;*/
+  }
+
+  ul.menu2>li{
+   /*float: left;*/
+   width: 20%;/*din tot*/
+   color: purple;
+  }
+
+  ul.submenu2>li{
+  /* width: 100%;/*din menu*/
+   display: inline;/*any height and width properties will have no effect*/
+    /*apar prea departate*/
+  }
+
+  ul.menu2>li>a,ul.submenu2>li>a{
+    display: block;/*apar prea adunate*/
+    padding: 14px 16px;/*apare si concept*/
+    /*text-decoration: none;*/
+  }
+
+ /* ul.menu2>li>ul.submenu2{
+    position: relative;
+    top: 0px;
+  }*/
+
+  ul.menu2>li:hover{
+    overflow:visible;
+    color: darkslateblue;
+  }
+
+  ul.submenu2>li:hover{
+    color: black;
+  }
+
+p{
+  /*width: 90.2%;*/
+  margin-left: 10%;
+  /*border-top: 0;*/
+}
+
+/*.header1{
+  padding: 20px;
+  text-align: center;
+  background-size: cover;
+  color: green;
+  font-size: 35px;
+  text-decoration: none;
+  background-image: url("../../poze/header1.jpg");
+}
+
+body{
+  background-color: gainsboro;
+  margin: 0;
+  font-family: '', serif;
+}*/
+
+h2{
+  color: purple;
+  text-align: center;
+}
+
+@media screen and (max-width:700px){
+    
+    p{
+      margin-left: 15%;
+    }
+
+  @media screen and (min-width: 400px) and (max-width:605px){
+
+      p#first{
+        margin-left: 32%;
+      }
+
+    }
+}

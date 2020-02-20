@@ -1,0 +1,66 @@
+/*.header1{
+  padding: 20px;
+  text-align: center;
+  background-size: cover;
+  color: green;
+  font-size: 35px;
+  text-decoration: none;
+  background-image: url("../../poze/header1.jpg");
+}
+
+body{
+  background-color: gainsboro;
+  margin: 0;
+}*/
+
+.row{
+  display: table; /*behave like a table element*/
+}
+
+.column{
+  float:left; /*inline*/
+  max-width: 50%;/*cate 2*/
+  padding: 10px; /*space around an element's content inside of defined border*/
+  box-sizing: border-box; /*include content, padding si border*/
+}
+
+.responsive{ /*sa incapa maxim pe coloana*/
+  width: 100%;
+  height: auto;
+}
+
+.hider {
+  background-color: #eee;
+  color: #444;/*text*/
+  cursor: pointer;/*indicates a link*/
+  /*width: 94%;*/
+  /*border: none;*/
+  /*font-size: 15px;*/
+  padding: 18px;
+}
+
+.textContainer{
+  /*margin: 0px;*/
+  /*padding: 0px;*/
+  font-size: 1.5vw; /*Relative to 1% of the width of the viewport*/
+  height: 70vh;/*intre el*/
+}
+
+@media screen and (max-width: 800px){
+  .column, .row{
+    max-width: 100%;
+  }
+  .textContainer{
+    font-size: 3vw;
+    width: auto;
+    height: auto;
+  }
+}
+
+.middle{
+  text-align: center;
+}
+
+.linkbox{
+  text-decoration: none;
+}

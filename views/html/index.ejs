@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+
+<html lang = "en">
+
+<!--abbr - abreviere 
+	b - pt cuvinte cheie
+	time - data
+	strong - H.L. accidentally overdosed
+	i - titlul unui ziar
+-->
+
+	<head>
+		<meta charset = "utf-8"/>
+		<meta name = "keywords" content = "Joker, Clown, DC, Comics, Batman, Cretated"/>
+		<meta name = "author" content = "Denisa Boriceanu"/>
+		<meta name = "description" content = "Fan-site about Joker which is a character that appears in Batman comic books published by DC Comics and is created by Bill Finger, Bob Kane and Jerry Robinson."/>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+		
+		<link rel= "shortcut icon" href= "poze/favicon.ico" type="image/x-icon"/>
+		<link rel = "stylesheet" href = "css/style.css" type = "text/css"/>
+		<link rel = "stylesheet" href = "css/animatie.css" type = "text/css"/>
+		
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+		<title>Joker</title>
+
+		<script type="text/javascript" src="../../node_modules/socket.io-client/dist/socket.io.js"></script>  
+	<script>
+	socketUrl = "../../";  
+	if(document.location.href.indexOf("localhost") != -1) {  
+		socketUrl = "http://127.0.0.1:8080";
+	}
+	const socket = io(socketUrl,{reconnect: true});  
+	//var socket = io.connect('http://127.0.0.1:8080', {reconnect: true});
+	socket.on("buton", (data) => {  
+		alert("buton apasat")
+	});
+
+	
+	</script>
+	</head>
+	
+	<body>
+		<header class = "header1">
+			<%- include("../fragmente/header") %>
+			
+		</header>
+		<nav class="wrapper">
+		<%- include("../fragmente/menu") %>
+	</nav>
+	<main> 
+
+		<!--<iframe src="https://www.youtube.com/embed/u3ayvKqdgU0?start=14" width="560" height="315" frameborder="0"></iframe>-->
+			<div class = "side">
+				<iframe src="https://www.youtube.com/embed/YmGS8oJ-S3U" width="560" height="315"></iframe>
+			<blockquote cite = "https://en.wikipedia.org/wiki/Joker_(character)">
+			<table class = "home-table">
+				<thead>
+					<tr>
+						<th colspan = "2">The Joker</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th colspan = "2">Publication information</th>
+					</tr>
+					<tr>
+						<td>Publisher</td>
+						<td><abbr title = "Detective Comics">DC</abbr> Comics</td>
+					</tr>
+					<tr>
+						<td>First appearance</td>
+						<td>Batman #1<time datetime = "1940-04-25">(April 25, 1940)</time></td>
+					</tr>
+					<tr>
+						<td>Created by</td>
+						<td><ul><li>Bill Finger</li>
+							<li>Bob Kane</li>
+							<li>Jerry Robinson</li>
+						</ul>
+						</td>
+					</tr>
+					<tr>
+						<th colspan = "2">In-story information</th>
+					</tr>
+					<tr>
+						<td>Team affiliations</td>
+						<td><ul><li>Injustice League</li>
+							<li>Injustice Gang</li>
+						</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>Notable aliases</td>
+						<td>Red Hood</td>
+					</tr>
+					<tr>
+						<td><a href = "nav/History.html#echipamente">Abilities</a></td>
+						<td><ul><li>Criminal mastermind</li>
+							<li>Expert chemist</li>
+							<li>Uses weaponized props and toxins</li>
+						</ul>
+						</td>
+					</tr>
+				</tbody>
+				<!--<tfoot>
+					<tr>
+					
+					</tr>
+				</tfoot>-->
+			</table>
+		</blockquote>
+		</div>
+		
+	</main>
+		<div id = "mybtn"><a href = "#top">&#8728; Top &#8728;</a></div>
+			
+	</body>
+</html>	
+		
