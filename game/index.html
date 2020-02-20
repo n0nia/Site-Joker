@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- X-UA-Compatible - allows web authors to choose what version of Internet Explorer the page should be rendered as -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!--<meta charset="utf-8" /> == -->
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <title>Javascript Platformer</title>
+
+  <style>
+    body            { background: #111; }
+    #platformer     { margin: 1em auto; position: relative; width: 512px; height: 384px; }
+    #canvas         { display: inline-block; width: 100%; height: 100%; }
+    #instructions   { font-style: italic; color: #999; font-size: 9pt; margin-left: 1em; margin-top: 0.5em; }
+    #instructions b { color: #DDD; }
+    @media screen and (min-width:     0px) and (min-height:    0px) { #platformer { width:  512px; height: 384px; font-size:  7pt; } } /* block = 16 */
+    @media screen and (min-width:   840px) and (min-height:  530px) { #platformer { width:  640px; height: 480px; font-size:  9pt; } } /* block = 20 */
+    @media screen and (min-width:   968px) and (min-height:  626px) { #platformer { width:  768px; height: 576px; font-size: 11pt; } } /* block = 24 */
+    @media screen and (min-width:  1096px) and (min-height:  722px) { #platformer { width:  896px; height: 672px; font-size: 13pt; } } /* block = 28 */
+    @media screen and (min-width:  1224px) and (min-height:  818px) { #platformer { width: 1024px; height: 768px; font-size: 15pt; } } /* block = 32 */
+  
+
+      *{
+        margin:0;
+        padding:0;
+      }
+      th,td{
+        border:1px solid black;
+        padding:5px;
+      }
+      th{
+        text-transform: capitalize;
+      }
+      table{
+        border-collapse:collapse;
+        empty-cells:show;
+      }
+
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="json+css/loading.css">
+  <link rel="stylesheet" type="text/css" href="json+css/column.css">
+
+</head>
+
+<body>
+
+ <!-- <input type="text" id="playerName" placeholder="Enter your name here" onkeyup="enableStartButton()" />
+  <input disabled id="StartButton" type="button" value="Start" onclick="startGame()" />-->
+
+
+  <div id="platformer">
+
+  	<!--used to draw graphics on a web page using javascript
+  		is a container for graphics-->
+    <canvas id="canvas">
+      <div class="unsupported">
+        Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+      </div>
+    </canvas>
+
+     <div class="row">
+      <div class="column">
+        <div id = "cheatcode" style="color: white; font-size: 15px; display: none">Cheatcode:
+          <div id="addCheckbox"></div>
+          <button id="checkBox" style="display: none" onclick="cheatCode()">Submit</button>
+        </div>
+        <br>
+        <div id ="level" style="color: white; font-size: 15px; display: none">Level: 
+        <div id="addRadio"></div>
+        <button onclick="check()">Check "Hard"</button>
+        <button onclick="uncheck()">Uncheck "Hard"</button>
+        </div>
+        <br>
+        <div id ="dayNight" style="color: white; font-size: 15px; display: none">Day/Night:
+        <select id="addSelect">
+         <!-- <div id="addSelect"></div>-->
+        </select>
+        <button id="Select" style="display: none" onclick="Select()">Submit</button>
+        </div> 
+      </div>
+      <div class="column">
+        <div id="Range" style="color: white; font-size: 15px; display: none">Lives: 
+          <div id="addRange"></div>
+            <button id="range" style="display: none" onclick="inputRange()">Submit</button>
+          </div>
+        <br>
+        <div id="Text" style="color: white; font-size: 15px; display: none">Name: 
+          <div id="addText"></div>
+            <button id="text" style="display: none" onclick="inputText()">Submit</button> 
+        </div>
+        <br>
+        <div id ="colorsEnemies" style="color: white; font-size: 15px; display: none">Enemies colors:
+          <div id="addTextarea"></div>
+            <button id="Textarea" style="display: none" onclick="Textarea()">Submit</button>
+        </div> 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <div id="updateDiv"></div>
+      </div>
+
+      <div class="column">
+        <div id="instructions"></div>
+      </div>
+    </div>
+
+    <div id="Potion" style = "display: none"></div>
+
+    <div id="container_tabel"></div>
+
+    <div id="content">
+      <div id="loading"></div>
+      <div id="isItLoaded"></div>
+    </div>
+
+     <script src="js/update_loop.js"></script>
+     <script src="js/constants.js"></script>
+     <script src="js/utilities.js"></script>
+     <script src="js/input.js"></script>
+     <script src="js/platformer.js"></script>
+     <script src="js/load_map.js"></script>
+     <script src="js/loading_screen.js"></script>
+     <script src="js/rendering.js"></script>
+     <script src="js/table.js"></script>
+
+    <button type="button" id="startBtn" onclick="enableStartButton()">START</button>
+    <button type="button" id="settingsBtn" onclick="settings()">SETTINGS</button>
+    <button type="button" id="submitBtn" onclick="enableStartButton()" style="display: none">SUBMIT</button>
+
+    <button type="button" id="highscoreBtn" onclick="showHighscore()">HIGHSCORE</button>
+    <button type="button" id="backBtn" onclick="backButton()" style="display: none">BACK</button>
+
+    
+
+  </div>
+
+</body>
+</html>
