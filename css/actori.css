@@ -1,0 +1,25 @@
+h2{
+	color: darkslateblue;
+	text-align: center;
+}
+
+h3{
+	text-align: center;
+}
+
+h3:first-of-type{
+	color: purple;
+}
+
+h4{
+	color: darkslateblue;
+}
+
+img{
+	width: 200px;
+	float: left;
+}
+
+p{
+	text-align: center;
+}
